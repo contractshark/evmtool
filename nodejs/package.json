@@ -1,0 +1,40 @@
+{
+  "name": "besu-ethereumjs-tx",
+  "version": "0.1.0",
+  "description": "A simple module for creating, manipulating and signing Ethereum transactions",
+  "main": "./transaction.js",
+  "types": "./index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "export LC_ALL=c"
+  },
+  "dependencies": {
+    "@ethereumjs/common": "^1.5.1",
+    "ethereumjs-util": "^7.0.4"
+  },
+  "devDependencies": {
+    "@ethereumjs/config-tsc": "^1.1.1",
+    "@ethereumjs/config-tslint": "^1.1.1",
+    "@types/bn.js": "^4.11.6",
+    "@types/minimist": "^1.2.0",
+    "@types/node": "^11.13.4",
+    "@types/tape": "^4.13.0",
+    "browserify": "^16.5.1",
+    "minimist": "^1.2.0",
+    "tape": "^4.10.1",
+    "ts-node": "^8.8.2",
+    "tslint": "^5.16.0",
+    "typescript": "^3.9.3",
+    "typestrict": "^1.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ethereumjs/ethereumjs-vm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ethereumjs/ethereumjs-vm/issues"
+  },
+  "homepage": "https://github.com/ethereumjs/ethereumjs-vm"
+}
