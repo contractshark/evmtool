@@ -20,15 +20,15 @@ Options specify the code and other contextual information.
 
 ##### "Syntax"
 
-    ```bash
-    --code=<code as hex string>
-    ```
+```bash
+--code=<code as hex string>
+```
 
 ##### "Example"
 
-    ```bash
-    --code=5B600080808060045AFA50600056
-    ```
+```bash
+--code=5B600080808060045AFA50600056
+```
 
 The code to be executed, in compiled hex code form.  There is no default value and execution fails if
 this is not set.
@@ -37,15 +37,15 @@ this is not set.
 
 ##### "Syntax"
 
-    ```bash
-    --gas=<gas as a decimal integer>
-    ```
+```bash
+--gas=<gas as a decimal integer>
+```
 
 ##### "Example"
 
-    ```bash
-    --gas=100000000
-    ```
+```bash
+--gas=100000000
+```
 
 Amount of gas to make available to the EVM.  The default value is 10 Billion, an incredibly large number
 unlikely to be seen in any production blockchain.
@@ -54,15 +54,15 @@ unlikely to be seen in any production blockchain.
 
 ##### "Syntax"
 
-    ```bash
-    --price=<gas price in GWei as a decimal integer>
-    ```
+```bash
+--price=<gas price in GWei as a decimal integer>
+```
 
 ##### "Example"
 
-    ```bash
-    --price=10
-    ```
+```bash
+--price=10
+```
 
 Price of gas in GWei. The default is zero.  If set to a non-zero value, the sender account must have
 enough value to cover the gas fees.
@@ -71,15 +71,15 @@ enough value to cover the gas fees.
 
 ##### "Syntax"
 
-    ```bash
-    --sender=<address>
-    ```
+```bash
+--sender=<address>
+```
 
 ##### "Example"
 
-    ```bash
-    --sender=0xfe3b557e8fb62b89f4916b721be55ceb828dbd73
-    ```
+```bash
+--sender=0xfe3b557e8fb62b89f4916b721be55ceb828dbd73
+```
 
 The account the invocation is sent from.  The specified account must exist in the world state, which
 unless specified by `--genesis` or `--prestate` is the set of [accounts used for testing](Accounts-for-Testing.md).
@@ -88,15 +88,15 @@ unless specified by `--genesis` or `--prestate` is the set of [accounts used for
 
 ##### "Syntax"
 
-    ```bash
-    --receiver=<address>
-    ```
+```bash
+--receiver=<address>
+```
 
 ##### "Example"
 
-    ```bash
-    --receiver=0x588108d3eab34e94484d7cda5a1d31804ca96fe7
-    ```
+```bash
+--receiver=0x588108d3eab34e94484d7cda5a1d31804ca96fe7
+```
 
 The account the invocation is sent to.  The specified account does not need to exist.
 
@@ -104,15 +104,15 @@ The account the invocation is sent to.  The specified account does not need to e
 
 ##### "Syntax"
 
-    ```bash
-    --input=<hex binary>
-    ```
+```bash
+--input=<hex binary>
+```
 
 ##### "Example"
 
-    ```bash
-    --input=9064129300000000000000000000000000000000000000000000000000000000
-    ```
+```bash
+--input=9064129300000000000000000000000000000000000000000000000000000000
+```
 
 The data passed into the call.  Corresponds to the `data` field of the transaction and is returned by
 the `CALLDATA` and related opcodes.
@@ -121,15 +121,15 @@ the `CALLDATA` and related opcodes.
 
 ##### "Syntax"
 
-    ```bash
-    --value=<Wei in decimal>
-    ```
+```bash
+--value=<Wei in decimal>
+```
 
 ##### "Example"
 
-    ```bash
-    --value=1000000000000000000
-    ```
+```bash
+--value=1000000000000000000
+```
 
 The value of Ether attached to this transaction.  For operations that query the value or transfer it
 to other accounts this is the amount that is available.  The amount is not reduced to cover intrinsic
@@ -139,15 +139,15 @@ cost and gas fees.
 
 ##### "Syntax"
 
-    ```bash
-    --json=<boolean>
-    ```
+```bash
+--json=<boolean>
+```
 
 ##### "Example"
 
-    ```bash
-    --json=true
-    ```
+```bash
+--json=true
+```
 
 Provide an operation-by-operation trace of the command in json when set to true.
 
@@ -155,15 +155,15 @@ Provide an operation-by-operation trace of the command in json when set to true.
 
 ##### "Syntax"
 
-    ```bash
-    --nomemory=<boolean>
-    ```
+```bash
+--nomemory=<boolean>
+```
 
 ##### "Example"
 
-    ```bash
-    --nomemory=true
-    ```
+```bash
+--nomemory=true
+```
 
 By default, when tracing operations the memory is traced for each operation.  For memory heavy scripts,
 setting this option may reduce the volume of json output.
@@ -172,15 +172,15 @@ setting this option may reduce the volume of json output.
 
 ##### "Syntax"
 
-    ```bash
-    --genesis=<path>
-    ```
+```bash
+--genesis=<path>
+```
 
 ##### "Example"
 
-    ```bash
-    --genesis=/opt/besu/genesis.json
-    ```
+```bash
+--genesis=/opt/besu/genesis.json
+```
 
 The Besu Genesis file to use when evaluating the EVM.  Most useful are the `alloc` items that set up
 accounts and their stored memory states.  For a complete description of this file see [Genesis File Items](Config-Items.md).
@@ -191,15 +191,15 @@ accounts and their stored memory states.  For a complete description of this fil
 
 ##### "Syntax"
 
-    ```bash
-    --chain=<mainnet|ropsten|rinkeby|goerli|classic|mordor|kotti|dev>
-    ```
+```bash
+--chain=<mainnet|ropsten|rinkeby|goerli|classic|mordor|kotti|dev>
+```
 
 ##### "Example"
 
-    ```bash
-    --chain=goerli
-    ```
+```bash
+--chain=goerli
+```
 
 The well-known network genesis file to use when evaluating the EVM.  These values are an alternative
 to the `--genesis` option for well known networks.
@@ -208,15 +208,15 @@ to the `--genesis` option for well known networks.
 
 ##### "Syntax"
 
-    ```bash
-    --repeat=<integer>
-    ```
+```bash
+--repeat=<integer>
+```
 
 ##### "Example"
 
-    ```bash
-    --repeat=1000
-    ```
+```bash
+--repeat=1000
+```
 
 Number of times to repeat the contract before gathering timing information.  This is useful when benchmarking
 EVM operations.
@@ -225,15 +225,15 @@ EVM operations.
 
 ##### "Syntax"
 
-    ```bash
-    --revert-reason-enabled=<boolean>
-    ```
+```bash
+--revert-reason-enabled=<boolean>
+```
 
 ##### "Example"
 
-    ```bash
-    --revert-reason-enabled=true
-    ```
+```bash
+--revert-reason-enabled=true
+```
 
 If enabled, the json tracing includes the reason included in `REVERT` operations.
 
@@ -241,15 +241,15 @@ If enabled, the json tracing includes the reason included in `REVERT` operations
 
 ##### "Syntax"
 
-    ```bash
-    --key-value-storage=<memory|rocksdb>
-    ```
+```bash
+--key-value-storage=<memory|rocksdb>
+```
 
 ##### "Example"
 
-    ```bash
-    --key-value-storage=rocksdb
-    ```
+```bash
+--key-value-storage=rocksdb
+```
 
 Kind of key value storage to use.
 
@@ -263,15 +263,15 @@ for a transaction.  Useful when evaluating consensus failures.
 
 ##### "Syntax"
 
-    ```bash
-    --data-path=<path>
-    ```
+```bash
+--data-path=<path>
+```
 
 ##### "Example"
 
-    ```bash
-    --data-path=/opt/besu/data
-    ```
+```bash
+--data-path=/opt/besu/data
+```
 
 When using `rocksdb` for `key-value-storage`, specifies the location of the database on disk.
 
@@ -279,15 +279,15 @@ When using `rocksdb` for `key-value-storage`, specifies the location of the data
 
 ##### "Syntax"
 
-    ```bash
-    --block-number=<integer>
-    ```
+```bash
+--block-number=<integer>
+```
 
 ##### "Example"
 
-    ```bash
-    --block-number=10000000
-    ```
+```bash
+--block-number=10000000
+```
 
 The block number to evaluate the code against.  Used to ensure that the EVM is evaluating the
 code against the correct fork, or to specify the specific world state when running with `rocksdb` for `key-value-storage`.
@@ -303,15 +303,15 @@ from EVM execution do not apply.
 
 ##### "Syntax"
 
-    ```bash
-    --json=<boolean>
-    ```
+```bash
+--json=<boolean>
+```
 
 ##### "Example"
 
-    ```bash
-    --json=true
-    ```
+```bash
+--json=true
+```
 
 Provide an operation by operation trace of the command in json when set to true.  Set to true for EVMLab
 Fuzzing.  Whether or not `json` is set, a summary JSON object is printed to standard output for each
@@ -324,15 +324,15 @@ in the order they are specified.
 
 ##### "Docker Example"
 
-    ```bash
-    docker run --rm -v ${PWD}:/opt/referencetests hyperledger/besu-evmtool:develop --json state-test /opt/referencetests/GeneralStateTests/stExample/add11.json
-    ```
+```bash
+docker run --rm -v ${PWD}:/opt/referencetests hyperledger/besu-evmtool:develop --json state-test /opt/referencetests/GeneralStateTests/stExample/add11.json
+```
 
 ##### "CLI Example"
 
-    ```bash
-    evm --json state-test stExample/add11.json
-    ```
+```bash
+evm --json state-test stExample/add11.json
+```
 
 ### Using Standard Input
 
@@ -341,12 +341,12 @@ from standard input and executes that state test.
 
 ##### "Docker Example"
 
-    ```bash
-    docker run --rm  -i hyperledger/besu-evmtool:develop --json state-test < stExample/add11.json
-    ```
+```bash
+docker run --rm  -i hyperledger/besu-evmtool:develop --json state-test < stExample/add11.json
+```
 
 ##### "CLI Example"
 
-    ```bash
-    evm --json state-test < stExample/add11.json
-    ```
+```bash
+evm --json state-test < stExample/add11.json
+```
