@@ -11,6 +11,53 @@ Options for running:
 * [Arbitrary EVM programs](#run-options)
 * [Ethereum State Tests](#state-test-options).
 
+## Quick Overview
+
+```bash
+$ ethereum/evmtool/build/install/evmtool/bin/evm --help
+Usage:
+
+evm [OPTIONS] [COMMAND]
+
+Description:
+
+This command evaluates EVM transactions.
+
+Options:
+      --code=<code>          Byte stream of code to be executed.
+      --gas=<int>            Amount of gas for this invocation.
+      --price=<int>          Price of gas (in GWei) for this invocation
+      --sender=<address>     Calling address for this invocation.
+      --receiver=<address>   Receiving address for this invocation.
+      --input=<code>         The CALLDATA for this invocation
+      --value=<int>          The amount of ether attached to this invocation
+      --json                 Trace each opcode as a json object.
+      --nomemory             Disable showing the full memory output for each op.
+      --genesis, --prestate=<genesisFile>
+                             The genesis file containing account data for this
+                               invocation.
+      --chain=<network>      Name of a well known network that will be used for
+                               this invocation.
+      --repeat=<repeat>      Number of times to repeat for benchmarking.
+  -h, --help                 Show this help message and exit.
+  -V, --version              Print version information and exit.
+      --revert-reason-enabled[=<Boolean>]
+                             Should revert reasons be persisted. (default: true)
+      --key-value-storage=<keyValueStorageName>
+                             Identity for the key-value storage to be used
+                               (default: 'memory' alternate: 'rocksdb')
+      --data-path=<PATH>     If using RocksDB storage, the path to Besu data
+                               directory (default:
+                               /Users/sbacha/besu-tool/build/data)
+      --block-number=<blockParameter>
+                             Block number to evaluate against (default:
+                               'PENDING', or 'EARLIEST', 'LATEST', or a number)
+Commands:
+  state-test  Execute an Ethereum State Test.
+
+Hyperledger Besu is licensed under the Apache License 2.0
+```
+
 ## Run Options
 
 The first mode of the EVM tool runs an arbitrary EVM and is invoked without an extra command. Command Line
