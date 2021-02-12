@@ -1,4 +1,3 @@
-
 FROM oracle/graalvm-ce:20.1.0-java11
 
 RUN adduser --home /opt/besu besu && \
