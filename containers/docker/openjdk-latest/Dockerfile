@@ -1,4 +1,3 @@
-
 FROM openjdk:slim-buster
 
 RUN adduser --disabled-password --gecos "" --home /opt/besu besu && \
@@ -9,6 +8,11 @@ WORKDIR /opt/besu
 
 COPY --chown=besu:besu besu /opt/besu/
 
+ENV ENV_BESU="-XX:+UseSerialGC","--enable-preview","-Xshare:on","-cp","-XX:+UseCompressedOops",  \
+    "-Dsun.io.useCanonPrefixCache=false","-XX:+UseConcMarkSweepGC","-Xmx2048m","-Xms128m",  \
+    "-XX:ReservedCodeCacheSize=240m","-XX:-OmitStackTraceInFastThrow","-XX:CICompilerCount=2", \
+    "-XX:HeapDumpPath=$USER_HOME/java_error_in_idea.hprof","-XX:ErrorFile=$USER_HOME/java_error_in_idea_%p.log"
+    
 # Expose services ports
 # 8545 HTTP JSON-RPC
 # 8546 WS JSON-RPC
