@@ -1,4 +1,3 @@
-
 FROM openjdk:11.0.7-jre-slim-buster
 
 RUN adduser --disabled-password --gecos "" --home /opt/besu besu && \
